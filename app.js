@@ -9,26 +9,62 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, dice, x;
-var scoreZero = document.querySelector('#score-0');
-var scoreOne = document.querySelector('#score-1');
+var scores, roundScore, activePlayer, x;
+
 
 scores = [0 , 0];
 roundScore = 0;
-activePlayer = 1;
+activePlayer = 0;
 x = document.querySelector('.dice').style.display = 'none';
+                        //Score inicial
+document.querySelector('#score-0').textContent = '0';
+document.querySelector('#current-0').textContent = '0';
+document.querySelector('#score-1').textContent = '0';
+document.querySelector('#current-1').textContent = '0';
 
-dice = Math.floor(Math.random() * 6) + 1
-/* Hecho por mi :D
-var y = document.querySelector('#current-' + activePlayer);
-console.log(scoreOne);
+                    //Roll Dice
+document.querySelector('.btn-roll').addEventListener('click', ()=>{
+    //  Random number
+    var dice = Math.floor(Math.random() * 6) + 1
+    //Display the result
+    var diceDom =document.querySelector('.dice');
+    diceDom.style.display = 'block';
+    diceDom.src = 'dice-' + dice + '.png';
+    //Update the round score IF the rolled number was NOT a 1
+    if(dice !== 1){
+        roundScore += dice;
+        document.querySelector('#current-' + activePlayer).textContent = roundScore
+    }else{
+        roundScore = 0;
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;
+        //New Player
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        //Active Class
+        document.querySelector('.player-0-panel').classList.toggle('active')
+        document.querySelector('.player-1-panel').classList.toggle('active')
+        // document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active')
+        // activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        // document.querySelector('.player-' + activePlayer + '-panel').classList.add('active')
+        document.querySelector('.dice').style.display = 'none';
+    }
+});
+                    //Hold score
+document.querySelector('.btn-hold').addEventListener('click', ()=> {
+    if(activePlayer === 0){
+        document.querySelector('#score-0').textContent = roundScore;
+    }else{
+        document.querySelector('#score-1').textContent = roundScore;
+    }
+})
 
-
-const roll = document.querySelector('.btn-roll')
-
-roll.addEventListener('click', ()=>{
-    dice = Math.floor(Math.random() * 6) + 1
-    
-    scores[activePlayer] += dice;
-    y.textContent = scores[activePlayer]
-});*/
+                //New game
+document.querySelector('.btn-new').addEventListener('click', () => {
+     //Reset
+     document.querySelector('#score-0').textContent = '0';
+     document.querySelector('#current-0').textContent = '0';
+     document.querySelector('#score-1').textContent = '0';
+     document.querySelector('#current-1').textContent = '0';
+     //Reset Scores
+     scores[0] = 0;
+     scores[1] = 0
+})
