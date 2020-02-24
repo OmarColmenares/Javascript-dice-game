@@ -7,22 +7,16 @@ resetScore();
                     //Roll Dice
 document.querySelector('.btn-roll').addEventListener('click', ()=>{
     if(gamePlaying){
-            //  Random number
-        var dice = Math.floor(Math.random() * 6) + 1
-        //Display the result
+                //Random number
+        var dice =  Math.floor(Math.random() * 6) + 1;
+                //Display the result
         var diceDom =document.querySelector('.dice');
         diceDom.style.display = 'block';
         diceDom.src = 'dice-' + dice + '.png';
-        //Update the round score IF the rolled number was NOT a 1
         if(dice !== 1){
             roundScore += dice;
-            document.querySelector('#current-' + activePlayer).textContent = roundScore
-         }else if(dice === 3){
-           roundScore += dice - 2;
-           document.querySelector('#current-' + activePlayer).textContent = roundScore
-         }else if(dice === 6){
-           roundScore += dice + 2;
-           document.querySelector('#current-' + activePlayer).textContent = roundScore
+            document.querySelector('#current-' + activePlayer).textContent = roundScore;
+
          }else{
            nextPlayer()
          }    
@@ -45,7 +39,7 @@ document.querySelector('.btn-hold').addEventListener('click', ()=> {
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             gamePlaying = false;
         }else{
-            nextPlayer()
+            nextPlayer();
         }
     }
 })
@@ -58,16 +52,16 @@ function nextPlayer(){
     roundScore = 0;
     document.querySelector('#current-' + activePlayer).textContent = roundScore;
     //Current Player
-    document.querySelector('.player-0-panel').classList.toggle('active')
-    document.querySelector('.player-1-panel').classList.toggle('active')
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
     //New Player
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-    document.querySelector('.dice').style.display = 'none'
+    //document.querySelector('.dice').style.display = 'none'
 }
 
 function resetScore(){
     //Variables
-    scores = [90 , 90];
+    scores = [0 , 0];
     roundScore = 0;
     activePlayer = 0;
     gamePlaying= true;
