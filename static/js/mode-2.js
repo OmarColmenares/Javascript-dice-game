@@ -1,9 +1,3 @@
-/*YOUR 3 CHALLENGES
-Change the game follow these rules:
-
-1.A player looses his ENTIRE score when he rolls two 6 in a row. After that, it's the next player's turn (Hint: Always save the previous dice tool in a separate variable);
-2. Add an input field to rhe HTMl where you can read that value with the .value property in Javascript. This is a good oportunity to use google to figure this out.
-3. Add another dice to the game, so that there are two dices now. The player looses his current score when one of them is a 1. (Hint: you will need CSS yo position the second dice, so take a look at the CSS code for the first one.)*/
 //Varaibles statements
 var scores, roundScore, activePlayer, gamePlaying, lastDiceZero, lastDiceOne;
 
@@ -23,8 +17,8 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
     diceDomZero.style.display = "block";
     diceDomOne.style.display = "block";
 
-    diceDomZero.src = "dice-" + rollDiceZero + ".png";
-    diceDomOne.src = "dice-" + rollDiceOne + ".png";
+    diceDomZero.src = "./img/dice-" + rollDiceZero + ".png";
+    diceDomOne.src = "./img/dice-" + rollDiceOne + ".png";
     //A player looses his ENTIRE score when he rolls two 6 in a row.
     if ((lastDiceZero === 6 && rollDiceZero === 6) || (lastDiceOne === 6 && rollDiceOne === 6)) {
       document.querySelector("#score-" + activePlayer).textContent = "0";
@@ -116,7 +110,7 @@ function resetScore() {
   document.querySelector("#current-0").textContent = "0";
   document.querySelector("#score-1").textContent = "0";
   document.querySelector("#current-1").textContent = "0";
-  //Rest winner
+  //Reset winner
   document.querySelector("#name-0").textContent = "Player 1";
   document.querySelector("#name-1").textContent = "Player 2";
   document.querySelector(".player-0-panel").classList.remove("winner");

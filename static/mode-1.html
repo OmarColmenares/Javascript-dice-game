@@ -12,7 +12,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="./css/style.css" />
 
     <title>Pig Game</title>
   </head>
@@ -36,28 +36,24 @@
           <div class="player-current-score" id="current-1">0</div>
         </div>
       </div>
-
-      <button class="btn-new">
-        <i class="ion-ios-plus-outline"></i>New game
-      </button>
+      <div>
+        <a href="mode-2.html" class="modes"> Mode 2 <i  class="ion-ios-arrow-forward"></i></a>
+      </div>
+      <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
       <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-      <button class="btn-hold">
-        <i class="ion-ios-download-outline"></i>Hold
-      </button>
+      <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
 
+     <div>
       <input
-        type="text"
-        name="final-score"
-        class="final-score"
-        id="final-score"
-        placeholder="Final Score"
+      type="text"
+      name="final-score"
+      class="hide"
+      id="final-score"
+      placeholder="Final Score"
       />
-
-      <img src="dice-5.png" alt="Dice" class="dice-0" />
-      <img src="dice-5.png" alt="Dice" class="dice-1" />
-    </div>
-
-    <!--<script src="app.js"></script>-->
-    <script src="mode2.js"></script>
+          <img src="./img/dice-5.png" alt="Dice" class="dice" />
+          <img src ="./img/dice-5.png" alt="Dice" class="hide" />
+          <script src="./js/mode-1.js" id="script"></script>
+     </div>
   </body>
 </html>
