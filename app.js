@@ -5,7 +5,7 @@ const app = express()
 //const event = require('events')
 app.use(express.static(path.join(__dirname, 'static')))
 
-app.get('/mode-1', (req,res) => {
+app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname, 'static', 'mode-1.html'));
 })
 
