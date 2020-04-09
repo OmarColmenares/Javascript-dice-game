@@ -20,20 +20,7 @@
   padding: 10px;
   width: 160px;
   text-transform: uppercase;
-}
-.hide {
-  display: none;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 520px;
-  color: #555;
-  font-size: 18px;
-  font-family: "Lato";
-  text-align: center;
-  padding: 10px;
-  width: 160px;
-  text-transform: uppercase;
+  visibility: hidden;
 }
 
 .final-score:focus {
@@ -183,22 +170,14 @@ i {
   top: 467px;
 }
 
-.dice {
+.dice-0 {
   position: absolute;
   left: 50%;
   top: 178px;
   transform: translateX(-50%);
   height: 100px;
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
-}
-
-.dice-0 {
-  position: absolute;
-  left: 56%;
-  top: 178px;
-  transform: translateX(-50%);
-  height: 100px;
-  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
 }
 
 .dice-1 {
@@ -208,6 +187,7 @@ i {
   transform: translateX(-50%);
   height: 100px;
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
 }
 
 .winner {
