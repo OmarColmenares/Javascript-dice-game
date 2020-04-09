@@ -11,7 +11,7 @@ MODE 1
 - The first player to reach 100 points on GLOBAL score wins the game
 
 MODE 2
--. A player looses his ENTIRE score when he rolls two 6 in a row. After that, it's the next player's turn.
--. In the input field to the players can set the winning score, so that they can change the predefined score of 100.
--. There are TWO dice now. The player LOSES his current score when one of them is a 1.
--. If both dice are EQUAl, they are not added to the round score, otherwise they are added to round score
+- A player looses his ENTIRE score when he rolls two 6 in a row. After that, it's the next player's turn.
+- In the input field to the players can set the winning score, so that they can change the predefined score of 100.
+- There are TWO dice now. The player LOSES his current score when one of them is a 1.
+- If both dice are EQUAl, they are not added to the round score, otherwise they are added to round score
