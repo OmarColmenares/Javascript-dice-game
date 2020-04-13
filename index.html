@@ -2,16 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,600"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="./css/style.css" />
 
     <title>Pig Game</title>
@@ -37,12 +28,12 @@
         </div>
       </div>
       <div class="change-mode" data-mode="mode-1">
-        <span class="modes" > Change Mode <i  class="ion-ios-arrow-forward"></i></span>
+        <span class="modes" > Change Mode <ion-icon name="chevron-forward-outline"></ion-icon></span>
         <input type="hidden" value="mode-1" class="mode"/>
       </div>
-      <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
-      <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-      <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+      <button class="btn-new"><ion-icon name="add-circle-outline"></ion-icon>New game</button>
+      <button class="btn-roll"><ion-icon name="refresh-outline"></ion-icon>Roll dice</button>
+      <button class="btn-hold"><ion-icon name="download-outline"></ion-icon>Hold</button>
 
      <div>
       <input
@@ -54,6 +45,7 @@
       />
           <img src="./img/dice-5.png" alt="Dice" class="dice-0" />
           <img src ="./img/dice-5.png" alt="Dice" class="dice-1" />
+          <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
           <script src="./js/index.js" id="script"></script>
      </div>
   </body>
